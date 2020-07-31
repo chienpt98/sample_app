@@ -1,0 +1,53 @@
+jp:
+  layouts:
+    application:
+      app_title: "サンプルアプリ"
+      english: "英語"
+      japanese: "日本語"
+    header:
+      app_title: "サンプルアプリ"
+      about: "情報"
+      contact: "連絡"
+      help: "助け"
+      home: "ホーム"
+      login: "ログイン"
+      languages: "言語"
+      english: "英語"
+      japanese: "日本語"
+    footer:
+      ruby_on_rails: "Ruby on Railsチュートリアル"
+      author: "Pham Chien"
+      about: "情報"
+      contact: "連絡"
+      news: "ニュース"
+  static_pages:
+    home:
+      home_title: "ホームページ"
+      home_description_title: "これは、"
+      home_description_detail: "サンプルアプリケーションのホームページです。"
+      ruby_on_rails: "Ruby on Railsチュートリアル"
+      about: "情報ページ"
+      contact: "連絡ページ"
+      help: "助けページ"
+      home: "ホームページ"
+      signup : "登録"
+    help:
+      help_title: "助け"
+      help_description_title: "ここで助けを得る："
+      help_description_detail:  "このサンプルアプリのヘルプについて："
+    about:
+      about_title: "情報"
+      about_description_title: "いくつかの追加の情報源と情報："
+      about_description_tutorial: "ファミリーのチュートリアル："
+      about_description_book: "参考の本："
+      about_description_series: "シリーズ："
+      about_description_ror: "Ruby on Rails："
+      about_description_end: "これはチュートリアルのサンプルアプリです。"
+    contact:
+      contact_title: "連絡"
+      contact_description_title: "ここで連絡してください："
+      contact_page: "連絡先"
+  users:
+    new:
+      signup: "登録"
+      description_title: "ここで登録"
