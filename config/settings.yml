@@ -9,3 +9,13 @@ contact: "https://github.com/chienpt98"
 static_pages:
     home:
       image_size: 200px
+validations:
+  name:
+    max_length: 50
+  email:
+    max_length: 255
+    regex: !ruby/regexp '/\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i'
+  password:
+    min_length: 6
+links:
+  gravartar: https://secure.gravatar.com/avatar/
