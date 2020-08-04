@@ -3,3 +3,17 @@ learnenough: "https://www.learnenough.com/"
 railstutorial_book: "https://www.railstutorial.org/book"
 railstutorial_help: "https://www.railstutorial.org/help"
 screencasts: "https://screencasts.railstutorial.org/"
+author: "https://github.com/chienpt98"
+news: "https://news.railstutorial.org/"
+contact: "https://github.com/chienpt98"
+static_pages:
+    home:
+      image_size: 200px
+validations:
+  name:
+    max_length: 50
+  email:
+    max_length: 255
+    regex: !ruby/regexp '/\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i'
+  password:
+    min_length: 6
