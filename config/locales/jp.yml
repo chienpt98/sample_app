@@ -14,9 +14,18 @@ jp:
       languages: "言語"
       english: "英語"
       japanese: "日本語"
+      account_header: "アカウント"
+      help_header: "助け"
+      home_header: "ホーム"
+      log_out_header: "ログアウト"
+      login_header: "ログイン"
+      logo_alt: "サンプルアプリ"
+      profile_header: "プロフィール"
+      setting_header: "設定"
+      users_header: "ユーザー"
     footer:
       ruby_on_rails: "Ruby on Railsチュートリアル"
-      author: "Pham Chien"
+      author: "ファム・チエン"
       about: "情報"
       contact: "連絡"
       news: "ニュース"
@@ -61,4 +70,16 @@ jp:
         name: "ユーザー名"
         email: "メール"
         password: "パスワード"
-        password_comfirmation: "パスワードの確認"
+        password_confirmation: "パスワードの確認"
+  sessions:
+    new:
+      email_login: "メール"
+      heading: "ログイン"
+      login_title: "ログイン"
+      new_user: "新しいユーザー?"
+      password_login: "パスワード"
+      sessions_create: "ログイン"
+      signup_now: "サインアップ"
+    create:
+        fail_mess_create: Invalid email/password combination.
+        success_mess: Log in successfully.

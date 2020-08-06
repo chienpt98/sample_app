@@ -16,6 +16,15 @@ en:
       languages: "Languages"
       english: "English"
       japanese: "Japanese"
+      account_header: Account
+      help_header: Help
+      home_header: Home
+      log_out_header: Log out
+      login_header: Log in
+      logo_alt: sample app
+      profile_header: Profile
+      setting_header: Settings
+      users_header: Users
     footer:
       ruby_on_rails: "Ruby On Rails Tutorials"
       author: "Pham Chien"
@@ -64,4 +73,16 @@ en:
         name: "Username"
         email: "Email"
         password: "Password"
-        password_comfirmation: "Comfirm Password"
+        password_confirmation: "Confirm Password"
+  sessions:
+    new:
+      email_login: Email
+      heading: Log in
+      login_title: Log in
+      new_user: New user?
+      password_login: Password
+      sessions_create: Log in
+      signup_now: Sign up now!
+    create:
+        fail_mess_create: Invalid email/password combination.
+        success_mess: Log in successfully.
