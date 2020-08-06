@@ -49,5 +49,16 @@ jp:
       contact_page: "連絡先"
   users:
     new:
-      signup: "登録"
-      description_title: "ここで登録"
+      signup: "サインアップ"
+      description_title: "新しいユーザーのページ"
+      heading: "サインアップ"
+    create:
+      success_mess: "成功のメッセージ"
+      fail_mess_create: "失敗のメッセージ"
+  helpers:
+    label:
+      user:
+        name: "ユーザー名"
+        email: "メール"
+        password: "パスワード"
+        password_comfirmation: "パスワードの確認"

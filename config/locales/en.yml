@@ -53,3 +53,15 @@ en:
     new:
       signup: "Sign Up"
       description_title: "This will be a signup page for new users"
+      heading: "Sign Up"
+      submit: "Create my account"
+    create:
+      success_mess: "Success mess"
+      fail_mess_create: "Fail mess create"
+  helpers:
+    label:
+      user:
+        name: "Username"
+        email: "Email"
+        password: "Password"
+        password_comfirmation: "Comfirm Password"
