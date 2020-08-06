@@ -19,3 +19,6 @@ validations:
     min_length: 6
 links:
   gravartar: https://secure.gravatar.com/avatar/
+sessions:
+  create:
+    select_box: 1

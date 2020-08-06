@@ -1,11 +1,23 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
-    <%= link_to t(".app_title"), root_path %>
+    <%= link_to t(".logo_alt"), root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to t(".home"), root_path %></li>
-        <li><%= link_to t(".help"), help_path %></li>
-        <li><%= link_to t(".login"), "#" %></li>
+        <li><%= link_to t(".home_header"), root_path %></li>
+        <li><%= link_to t(".help_header"), help_path %></li>
+        <% if logged_in? %>
+          <li><%= link_to t(".users_header"), "#" %></li>
+          <li class="dropdown">
+            <li><%= link_to t(".profile_header"), current_user %></li>
+            <li><%= link_to t(".setting_header"), "#" %></li>
+            <li class="divider"></li>
+            <li>
+              <%= link_to t(".log_out_header"), logout_path, method: :delete %>
+            </li>
+          </li>
+        <% else %>
+          <li><%= link_to t(".login_header"), login_path %></li>
+        <% end %>
       </ul>
     </nav>
   </div>
