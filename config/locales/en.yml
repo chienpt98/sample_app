@@ -63,10 +63,24 @@ en:
       signup: "Sign Up"
       description_title: "This will be a signup page for new users"
       heading: "Sign Up"
-      submit: "Create my account"
+      signup_create: "Create my account"
     create:
       success_mess: "Success mess"
       fail_mess_create: "Fail mess create"
+    index:
+      heading: "All users"
+      index_title: "All users"
+    destroy:
+      success_mess_delete: "User deleted"
+      fail_mess_notfound: "Account not found."
+    edit:
+      change_link: "Change"
+      edit_create: "Save changes"
+      edit_title: "Edit user"
+      heading: "Update your profile"
+      login_remind: "Please log in."
+      fail_mess_notfound: "Account not found."
+
   helpers:
     label:
       user:

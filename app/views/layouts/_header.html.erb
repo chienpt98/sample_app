@@ -6,14 +6,14 @@
         <li><%= link_to t(".home_header"), root_path %></li>
         <li><%= link_to t(".help_header"), help_path %></li>
         <% if logged_in? %>
-          <li><%= link_to t(".users_header"), "#" %></li>
+          <li><%= link_to t(".users_header"), users_path %></li>
           <li class="dropdown">
-            <li><%= link_to t(".profile_header"), current_user %></li>
-            <li><%= link_to t(".setting_header"), "#" %></li>
-            <li class="divider"></li>
-            <li>
-              <%= link_to t(".log_out_header"), logout_path, method: :delete %>
-            </li>
+              <li><%= link_to t(".profile_header"), current_user %></li>
+              <li><%= link_to t(".setting_header"), edit_user_path(current_user) %></li>
+              <li class="divider"></li>
+              <li>
+                <%= link_to t(".log_out_header"), logout_path, method: :delete %>
+              </li>
           </li>
         <% else %>
           <li><%= link_to t(".login_header"), login_path %></li>
