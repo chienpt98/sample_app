@@ -61,6 +61,7 @@ jp:
       signup: "サインアップ"
       description_title: "新しいユーザーのページ"
       heading: "サインアップ"
+      signup_create: "サインアップ"
     create:
       success_mess: "成功のメッセージ"
       fail_mess_create: "失敗のメッセージ"

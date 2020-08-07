@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  USERS_PARAMS = %i(name email password password_confirmation).freeze
+  USERS_PARAMS = %i(name email password password_confirmation)
 
   attr_accessor :remember_token
 
