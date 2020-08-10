@@ -65,8 +65,9 @@ en:
       heading: "Sign Up"
       signup_create: "Create my account"
     create:
-      success_mess: "Success mess"
-      fail_mess_create: "Fail mess create"
+      fail_mess_create: Account create fail.
+      info_mess_mail: Please check your email to activate your account.
+      success_mess: Welcome to the Sample App!
     index:
       heading: "All users"
       index_title: "All users"
@@ -80,7 +81,24 @@ en:
       heading: "Update your profile"
       login_remind: "Please log in."
       fail_mess_notfound: "Account not found."
-
+  password_resets:
+    edit:
+      heading: "Reset pasword"
+      reset_submit: "Update password"
+      reset_title: "Reset pasword"
+    new:
+      forget_create: "Submit"
+      forgot_title: "Forgot pasword"
+      heading: "Forgot password"
+      fail_mess_create: "Password reset fail."
+      fail_mess_expired: "Password reset has expired."
+    create:
+      fail_mess_create: "Email address not found."
+      info_mess_mail: "Email sent with password reset instructions."
+    update:
+      success_mess_update: "Password has been reset."
+      fail_mess_create: "Password reset fail."
+      fail_mess_expired: "Password reset has expired."
   helpers:
     label:
       user:
