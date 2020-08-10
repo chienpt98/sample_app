@@ -2,6 +2,8 @@ class User < ApplicationRecord
   USERS_PARAMS = %i(name email password password_confirmation).freeze
   USERS_PARAMS_RESET = %i(password password_confirmation).freeze
 
+  has_many :microposts, dependent: :destroy
+
   attr_accessor :remember_token, :activation_token, :reset_token
 
   scope :is_activated, ->{where activated: true}
@@ -37,6 +39,10 @@ class User < ApplicationRecord
 
   def forget
     update remember_digest: nil
+  end
+
+  def feed
+    microposts
   end
 
   def activate

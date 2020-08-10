@@ -9,6 +9,15 @@ contact: "https://github.com/chienpt98"
 static_pages:
     home:
       image_size: 200px
+    links:
+      rails_tutorial:
+        home_page: https://www.railstutorial.org/
+        help_page: https://www.railstutorial.org/help
+        book_page: https://www.railstutorial.org/book
+        screencasts_page: https://screencasts.railstutorial.org/
+        contact_page: https://www.railstutorial.org/contact
+        new_page: https://news.railstutorial.org/
+        author: https://www.michaelhartl.com/
 validations:
   name:
     max_length: 50
@@ -17,6 +26,8 @@ validations:
     regex: !ruby/regexp '/\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i'
   password:
     min_length: 6
+  content:
+    max_length: 140
 links:
   gravartar: https://secure.gravatar.com/avatar/
 
@@ -29,3 +40,9 @@ gravartar:
   options_link: '?s=%{size}'
 password_reset:
   expired_time: 2
+files:
+  image_type: /%w(image/jpeg image/gif image/png)/
+  valid_input: image/jpeg,image/gif,image/png
+  pic_resize: 500
+  pic_size: 5
+  change_digit: 1048576
