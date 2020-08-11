@@ -17,3 +17,9 @@ User.create! name: "Example User",
                activated: true,
                activated_at: Time.zone.now
 end
+
+user = User.last
+50.times do
+  content = Faker::Lorem.sentence word_count: 5
+  user.microposts.create! content: content
+end

@@ -99,6 +99,17 @@ en:
       success_mess_update: "Password has been reset."
       fail_mess_create: "Password reset fail."
       fail_mess_expired: "Password reset has expired."
+  microposts:
+    create:
+      fail_mess: "Micropost create fail."
+      success_mess: "Micropost created!"
+    destroy:
+      success_mess: "Micropost deleted."
+    micropost:
+      delete_confirm: "You sure?"
+      delete_link: "Delete"
+      prefix_time: "Posted"
+      suffix_time: "ago."
   helpers:
     label:
       user:
@@ -106,6 +117,21 @@ en:
         email: "Email"
         password: "Password"
         password_confirmation: "Confirm Password"
+  shared:
+    error_messages:
+      errors_count:
+        one: The form contains one error
+        other: The form contains %{count} errors
+    micropost_form:
+      alert_detail: Maximum file size is 5MB. Please choose a smaller file.
+      placeholder: Compose new micropost...
+      post_submit: Post
+    stats:
+      followers_html: <strong id="followers" class="stat"> %{count} </strong> Followers
+      following_html: <strong id="following" class="stat"> %{count} </strong> Following
+    user_info:
+      profile_link: View my profile
+      suffix_count: micropost
   sessions:
     new:
       email_login: Email
