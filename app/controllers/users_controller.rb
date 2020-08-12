@@ -28,6 +28,8 @@ class UsersController < ApplicationController
   def show
     redirect_to(root_url) && return unless @user.activated?
     @microposts = @user.microposts.page params[:page]
+    @follow = current_user.active_relationships.build
+    @unfollow = current_user.active_relationships.find_by followed_id: @user.id
   end
 
   def edit; end
@@ -54,14 +56,6 @@ class UsersController < ApplicationController
     params.require(:user).permit User::USERS_PARAMS
   end
 
-  def find_user
-    @user = User.find_by id: params[:id]
-    return if @user
-
-    flash[:danger] = t ".fail_mess_notfound"
-    redirect_to root_url
-  end
-
   def correct_user
     @user = User.find_by id: params[:id]
     redirect_to root_path unless current_user? @user
@@ -71,4 +65,11 @@ class UsersController < ApplicationController
     redirect_to root_url unless current_user.admin?
   end
 
+  def find_user
+    @user = User.find_by id: params[:id]
+    return if @user
+
+    flash[:danger] = t ".fail_mess_notfound"
+    redirect_to root_url
+  end
 end

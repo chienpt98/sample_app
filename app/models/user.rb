@@ -3,8 +3,18 @@ class User < ApplicationRecord
   USERS_PARAMS_RESET = %i(password password_confirmation).freeze
 
   has_many :microposts, dependent: :destroy
+  has_many :active_relationships, class_name: Relationship.name,
+                                  foreign_key: :follower_id,
+                                  dependent: :destroy,
+                                  inverse_of: :follower
+  has_many :passive_relationships, class_name: Relationship.name,
+                                  foreign_key: :followed_id,
+                                  dependent: :destroy,
+                                  inverse_of: :followed
+  has_many :following, through: :active_relationships, source: :followed
+  has_many :followers, through: :passive_relationships, source: :follower
 
-  attr_accessor :remember_token, :activation_token, :reset_token
+  attr_accessor :remember_token, :activation_token
 
   scope :is_activated, ->{where activated: true}
 
@@ -41,10 +51,6 @@ class User < ApplicationRecord
     update remember_digest: nil
   end
 
-  def feed
-    microposts
-  end
-
   def activate
     update activated: true, activated_at: Time.zone.now
   end
@@ -64,6 +70,22 @@ class User < ApplicationRecord
 
   def password_reset_expired?
     reset_sent_at < Settings.password_reset.expired_time.hours.ago
+  end
+
+  def follow other_user
+    following << other_user
+  end
+
+  def unfollow other_user
+    following.delete other_user
+  end
+
+  def following? other_user
+    following.include? other_user
+  end
+
+  def feed
+    Micropost.feed_by_user following_ids << id
   end
 
   class << self

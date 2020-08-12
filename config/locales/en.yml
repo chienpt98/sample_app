@@ -81,6 +81,10 @@ en:
       heading: "Update your profile"
       login_remind: "Please log in."
       fail_mess_notfound: "Account not found."
+    follow:
+      follow: Follow
+    unfollow:
+      unfollow: Unfollow
   password_resets:
     edit:
       heading: "Reset pasword"
@@ -144,3 +148,7 @@ en:
     create:
         fail_mess_create: Invalid email/password combination.
         success_mess: Log in successfully.
+  relationships:
+    index:
+      followers: Followers
+      following: Following
